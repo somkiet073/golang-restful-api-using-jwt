@@ -5,9 +5,17 @@ Content-Type: application/json
 
 {
     "username": "admin",
-    "password": "1234"
+    "password": "1234s"
 }
 
 ###
 GET {{base_url}}/api/account/checktoken HTTP/1.1
-key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MDI0MzkxNDYsInBhc3N3b3JkIjoiMTIzNCIsInVzZXJuYW1lIjoiYWRtaW4ifQ.nHaZmctvhb8PicbzhqlAwgR0gCq5s0O6mUXm25djVfQ
+key: Token Key
+
+###
+GET {{base_url}}/api/demo/demo1 HTTP/1.1
+key:Token Key
+
+###
+GET {{base_url}}/api/demo/demo2 HTTP/1.1
+key:Token Key

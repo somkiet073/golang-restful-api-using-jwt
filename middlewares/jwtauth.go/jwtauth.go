@@ -20,12 +20,11 @@ func JWTAuth(next http.Handler) http.Handler {
 				return []byte(secretKey), nil
 			})
 
-			if err != nil && result.Valid {
+			if err == nil && result.Valid {
 				next.ServeHTTP(w, r)
 			} else {
 				accountapi.ResponseWithError(w, http.StatusUnauthorized, "Unauthorized")
 			}
-			accountapi.ResponseWithJson(w, http.StatusUnauthorized, "Unauthorized")
 		}
 	})
 }
